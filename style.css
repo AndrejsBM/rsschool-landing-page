@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --32px: 2rem;
+}
+
+body {
+  margin: 0;
+  /* font-family: */
+  /* font-size: */
+  /* color: */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
