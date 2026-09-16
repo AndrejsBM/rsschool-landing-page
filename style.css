@@ -14,6 +14,12 @@ html {
   --24px: 1.5rem;
   --32px: 2rem;
 
+  --text-clr-primary: #403f3d;
+  --text-clr-inverse: #e1d4c9;
+  --accent-clr: #b0907a;
+  --border-clr-primary: #c1b6ad;
+  --border-clr-inverse: #665f55;
+  --container-clr-dark: #403f3d;
   --bg-clr-light: #e1d4c9;
   --bg-clr-dark: #292826;
 }
@@ -31,18 +37,125 @@ p {
   margin-top: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   margin: 0;
   /* font-family: */
   /* font-size: */
-  /* color: */
+  color: var(--text-clr-primary);
   background-color: var(--bg-clr-light);
 }
 
 body[data-theme='light'] {
   background-color: var(--bg-clr-light);
+
+  .toggle-light {
+    path {
+      fill: var(--text-clr-inverse);
+    }
+  }
+
+  .toggle-dark {
+    fill: #403f3d;
+  }
+
+  .toggle-dark:hover,
+  .toggle-dark:active {
+    fill: #e1d4c9;
+    background-color: var(--border-clr-inverse);
+  }
 }
 
 body[data-theme='dark'] {
   background-color: var(--bg-clr-dark);
+
+  .toggle-dark {
+    fill: var(--text-clr-inverse);
+    background-color: var(--accent-clr);
+  }
+
+  .toggle-light {
+    background-color: transparent;
+
+    path {
+      fill: var(--text-clr-inverse);
+    }
+  }
+
+  .toggle-light:hover,
+  .toggle-light:active {
+    background-color: var(--container-clr-dark);
+  }
+
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: block;
+  }
+}
+
+.header {
+  /* display: flex; */
+}
+
+.nav {
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__list-link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.header__logo {
+  display: flex;
+
+  .logo-dark {
+    display: none;
+  }
+}
+
+.toggle {
+  border: 1px solid var(--border-clr-primary);
+  border-radius: 100px;
+  width: 88px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  label {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.toggle-light {
+  background-color: var(--accent-clr);
+}
+
+.toggle-dark,
+.toggle-light {
+  border-radius: 50%;
+  transition:
+    fill 0.3s,
+    background-color 0.3s;
+  cursor: pointer;
 }
