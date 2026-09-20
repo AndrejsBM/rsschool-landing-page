@@ -796,6 +796,16 @@ body[data-theme='dark'] {
       height: 44px;
     }
   }
+
+  .carousel {
+    .btn-left {
+      right: calc(100% - 60px);
+    }
+
+    .btn-right {
+      left: calc(100% - 60px);
+    }
+  }
 }
 
 @media (max-width: 720px) {
@@ -829,5 +839,20 @@ body[data-theme='dark'] {
 @media (max-width: 520px) {
   .header__menu {
     gap: var(--12px);
+  }
+
+  .section-favorite {
+    .section-favorite__title {
+      font-size: var(--32px);
+      letter-spacing: 0.8px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .carousel {
+    .carousel__btn {
+      display: none;
+    }
   }
 }
