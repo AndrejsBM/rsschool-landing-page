@@ -37,6 +37,7 @@ html {
   --8px: 0.5rem;
   --12px: 0.75rem;
   --16px: 1rem;
+  --18px: 1.125rem;
   --20px: 1.25rem;
   --24px: 1.5rem;
   --32px: 2rem;
@@ -210,6 +211,24 @@ body[data-theme='dark'] {
         svg {
           stroke: var(--text-clr-inverse);
         }
+      }
+    }
+  }
+
+  .carousel__btn {
+    border: 1px solid var(--border-clr-primary);
+
+    svg {
+      stroke: var(--text-clr-inverse);
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--text-clr-primary);
+      border-color: var(--text-clr-primary);
+
+      svg {
+        stroke: var(--text-clr-inverse);
       }
     }
   }
@@ -586,12 +605,111 @@ body[data-theme='dark'] {
   .section-favorite__title {
     color: var(--text-clr-primary);
     font-size: var(--60px);
+    font-weight: 600;
     line-height: 1.25;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: var(--40px);
 
     span {
       color: var(--accent-clr);
       font-style: italic;
     }
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+
+  .carousel__item {
+    text-align: center;
+  }
+
+  .carousel__img {
+    margin-bottom: var(--18px);
+    display: flex;
+    justify-content: center;
+
+    img {
+      display: block;
+    }
+  }
+
+  .carousel__item-name {
+    font-size: var(--24px);
+    letter-spacing: 0.7px;
+    font-weight: inherit;
+    margin-bottom: var(--12px);
+  }
+
+  .carousel__item-description {
+    max-width: 45ch;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-inline: auto;
+  }
+
+  .carousel__item-price {
+    font-size: var(--24px);
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--40px);
+  }
+
+  .carousel__indicators {
+    width: 144px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carousel__indicator {
+    width: 40px;
+    height: 4px;
+    background-color: var(--border-clr-primary);
+    border-radius: 100px;
+
+    &.current {
+      background-color: var(--border-clr-inverse);
+    }
+  }
+
+  .carousel__btn {
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid var(--border-clr-inverse);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 42.5%;
+    transition: background-color 0.3s;
+
+    svg {
+      stroke: var(--text-clr-primary);
+      transition: stroke 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--border-clr-inverse);
+
+      svg {
+        stroke: var(--text-clr-inverse);
+      }
+    }
+  }
+
+  .btn-left {
+    right: calc(100% - 64px);
+  }
+
+  .btn-right {
+    left: calc(100% - 64px);
   }
 }
 
