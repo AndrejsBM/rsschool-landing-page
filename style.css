@@ -595,19 +595,44 @@ body[data-theme='dark'] {
     align-items: center;
     gap: 8px;
     position: relative;
+    transition: opacity 0.3s;
+
+    span {
+      transition: transform 0.3s;
+    }
   }
 
   .section-hero__btn-icon {
     opacity: 0;
-    transition: opacity 0.3s;
     position: absolute;
-    right: 27%;
+    transform: translateX(125%);
+    transition:
+      opacity 1s,
+      stroke 1s;
   }
 
   .section-hero__btn:hover .section-hero__btn-icon,
   .section-hero__btn:active .section-hero__btn-icon {
     stroke: var(--text-clr-primary);
     opacity: 1;
+  }
+
+  .section-hero__btn:hover span,
+  .section-hero__btn:active span {
+    transform: translateX(-14px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .section-hero {
+    .section-hero__btn-icon {
+      display: none;
+    }
+
+    .section-hero__btn:hover span,
+    .section-hero__btn:active span {
+      transform: none;
+    }
   }
 }
 
