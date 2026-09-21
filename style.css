@@ -335,6 +335,79 @@ body[data-theme='dark'] {
   .card {
     border: 1px solid var(--border-clr-inverse);
   }
+
+  @media (hover: none) and (pointer: coarse) {
+    .section-menu {
+      .section-menu__filter-item {
+        &:hover,
+        &:active {
+          background-color: transparent;
+          color: var(--text-clr-inverse);
+          border: 1px solid var(--border-clr-inverse);
+
+          span {
+            background-color: var(--border-clr-inverse);
+          }
+        }
+      }
+    }
+
+    .carousel {
+      .carousel__btn {
+        border: 1px solid var(--border-clr-primary);
+
+        svg {
+          stroke: var(--text-clr-inverse);
+        }
+
+        &:hover,
+        &:active {
+          background-color: var(--bg-clr-dark);
+          border: 1px solid var(--border-clr-primary);
+
+          svg {
+            stroke: var(--text-clr-inverse);
+          }
+        }
+      }
+    }
+
+    .section-app {
+      .section-app__btn {
+        color: var(--text-clr-inverse);
+        border: 1px solid var(--border-clr-primary);
+
+        svg {
+          fill: var(--text-clr-inverse);
+        }
+
+        &:hover svg,
+        &:active svg {
+          fill: var(--text-clr-inverse);
+        }
+
+        &:hover,
+        &:active {
+          background-color: transparent;
+          border: 1px solid var(--border-clr-primary);
+        }
+      }
+    }
+
+    .footer {
+      .footer__socials-link {
+        &:hover,
+        &:active {
+          background-color: transparent;
+          border: 1px solid var(--border-clr-inverse);
+
+          svg {
+            stroke: var(--text-clr-inverse);
+          }
+        }
+      }
+    }
+  }
 }
 
 .container {
@@ -708,6 +781,7 @@ body[data-theme='dark'] {
     height: 4px;
     background-color: var(--border-clr-primary);
     border-radius: 100px;
+    cursor: pointer;
 
     &.current {
       background-color: var(--border-clr-inverse);
@@ -747,6 +821,21 @@ body[data-theme='dark'] {
 
   .btn-right {
     left: calc(100% - 64px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .carousel {
+    .carousel__btn {
+      &:hover,
+      &:active {
+        background-color: transparent;
+
+        svg {
+          stroke: var(--text-clr-primary);
+        }
+      }
+    }
   }
 }
 
@@ -893,6 +982,24 @@ body[data-theme='dark'] {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .section-app {
+    .section-app__btn {
+      &:hover svg,
+      &:active svg {
+        fill: var(--text-clr-primary);
+      }
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        color: var(--text-clr-primary);
+        border: 1px solid var(--border-clr-inverse);
+      }
+    }
+  }
+}
+
 .footer {
   padding: var(--100px);
   background-color: var(--border-clr-inverse);
@@ -1010,6 +1117,31 @@ body[data-theme='dark'] {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .footer {
+    .footer__socials-link {
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border: 1px solid var(--border-clr-primary);
+
+        svg {
+          stroke: var(--text-clr-inverse);
+        }
+      }
+    }
+
+    .footer__contacts-link {
+      &:hover,
+      &:active {
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
 .section-menu {
   padding: 0 0 var(--100px) 0;
 
@@ -1115,6 +1247,23 @@ body[data-theme='dark'] {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .section-menu {
+    .section-menu__filter-item {
+      &:hover,
+      &:active {
+        border: 1px solid var(--border-clr-primary);
+        color: var(--text-clr-primary);
+        background-color: transparent;
+
+        span {
+          background-color: var(--border-clr-primary);
+        }
+      }
+    }
+  }
+}
+
 .card {
   border: 1px solid var(--border-clr-primary);
   border-radius: 40px;
@@ -1173,6 +1322,15 @@ body[data-theme='dark'] {
     box-shadow:
       0 10px 20px rgba(0, 0, 0, 0.2),
       0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .card {
+    &:hover,
+    &:active {
+      box-shadow: none;
+    }
   }
 }
 
