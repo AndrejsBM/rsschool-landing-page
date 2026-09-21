@@ -428,30 +428,51 @@
             get some work done.
           </h2>
           <div class="section-about__gallery">
-            <picture class="section-about__gallery-img">
-              <img
-                src="./assets/img/about-1.jpg"
-                alt="Smiling girl is drinking coffee"
-              />
-            </picture>
-            <picture class="section-about__gallery-img">
-              <img
-                src="./assets/img/about-2.jpg"
-                alt="A table and a cup of coffee"
-              />
-            </picture>
-            <picture class="section-about__gallery-img">
-              <img
-                src="./assets/img/about-3.jpg"
-                alt="Working man is drinking coffee"
-              />
-            </picture>
-            <picture class="section-about__gallery-img">
-              <img
-                src="./assets/img/about-4.jpg"
-                alt="Happy couple is drinking coffee"
-              />
-            </picture>
+            <div class="col-1">
+              <picture class="section-about__gallery-img">
+                <source
+                  media="(max-width: 525px)"
+                  srcset="./assets/img/about-1-s.jpg"
+                />
+                <source
+                  media="(max-width: 1023px)"
+                  srcset="./assets/img/about-1-m.jpg"
+                />
+
+                <img
+                  src="./assets/img/about-1.jpg"
+                  alt="Smiling girl is drinking coffee"
+                />
+              </picture>
+              <picture class="section-about__gallery-img">
+                <img
+                  src="./assets/img/about-2.jpg"
+                  alt="A table and a cup of coffee"
+                />
+              </picture>
+            </div>
+            <div class="col-2">
+              <picture class="section-about__gallery-img">
+                <img
+                  src="./assets/img/about-3.jpg"
+                  alt="Working man is drinking coffee"
+                />
+              </picture>
+              <picture class="section-about__gallery-img">
+                <source
+                  media="(max-width: 525px)"
+                  srcset="./assets/img/about-4-s.jpg"
+                />
+                <source
+                  media="(max-width: 1023px)"
+                  srcset="./assets/img/about-4-m.jpg"
+                />
+                <img
+                  src="./assets/img/about-4.jpg"
+                  alt="Happy couple is drinking coffee"
+                />
+              </picture>
+            </div>
           </div>
         </section>
       </div>
