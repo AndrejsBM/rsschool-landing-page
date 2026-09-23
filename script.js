@@ -1,7 +1,10 @@
+import mobileNav from "./features/mobileNav.js";
+
 window.addEventListener('DOMContentLoaded', function () {
   const themeToggle = document.querySelector('.toggle');
   const body = document.body;
 
+  mobileNav();
   updateTheme();
 
   themeToggle.addEventListener('click', function (e) {
