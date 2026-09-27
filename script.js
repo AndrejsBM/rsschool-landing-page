@@ -2,6 +2,7 @@ import mobileNav from "./features/mobileNav.js";
 import carousel from "./features/carousel.js";
 import menuModal from "./features/menuModal.js";
 import createMenuCard from "./features/createMenuCard.js";
+import menuFilter from "./features/menuFilter.js";
 
 window.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
@@ -13,7 +14,6 @@ window.addEventListener('DOMContentLoaded', function () {
   updateTheme();
   mobileNav();
   // carousel();
-
   menuModal();
 
   async function loadMenu() {
@@ -35,7 +35,9 @@ window.addEventListener('DOMContentLoaded', function () {
       const cards = createMenuCard(item);
 
       menuSection.append(cards);
-    })
+    });
+
+    menuFilter();
   }
 
   init();

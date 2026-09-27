@@ -10,7 +10,7 @@ function createMenuCard(data) {
   const pElem = document.createElement('p');
   const pPriceElem = document.createElement('p');
   card.classList.add('section-menu__menu-card', 'card');
-  card.dataset.category = data.category
+  card.dataset.category = data.category;
   cardImg.src = `../assets/img/${formatTitle(data.name)}.jpg`;
   cardImg.alt = data.name;
   cardImg.classList.add('card__img');

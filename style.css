@@ -1413,7 +1413,6 @@ body[data-theme='dark'] {
   .card__text {
     font-weight: 400;
     letter-spacing: 0.5px;
-    margin-bottom: 0;
     margin-bottom: auto;
   }
 
