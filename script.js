@@ -1,28 +1,57 @@
 import mobileNav from "./features/mobileNav.js";
 import carousel from "./features/carousel.js";
 import menuModal from "./features/menuModal.js";
+import createMenuCard from "./features/createMenuCard.js";
 
 window.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
   const themeToggle = document.querySelector('.toggle');
+  const menuSection = document.querySelector('.section-menu__menu-cards');
   const modalOverlay = document.querySelector('.modal-overlay');
   const closeModalBtn = document.querySelector('.modal__btn');
 
   updateTheme();
   mobileNav();
   // carousel();
+
   menuModal();
 
-  modalOverlay.addEventListener('click', (event) => {
+  async function loadMenu() {
+    const response = await fetch('../data/products.json');
+    
+    return await response.json();
+  }
+
+
+  async function init() {
+    if (!menuSection) {
+      return;
+    }
+
+
+    const menu = await loadMenu();
+
+    menu.forEach(item => {
+      const cards = createMenuCard(item);
+
+      menuSection.append(cards);
+    })
+  }
+
+  init();
+
+
+
+  modalOverlay?.addEventListener('click', (event) => {
     if (!event.target.closest('.modal__inner')) {
       // closeModal();
-      modalOverlay.classList.remove('opened');
+      modalOverlay?.classList.remove('opened');
     }
   });
 
-  closeModalBtn.addEventListener('click', () => {
+  closeModalBtn?.addEventListener('click', () => {
     // closeModal();
-     modalOverlay.classList.remove('opened');
+     modalOverlay?.classList.remove('opened');
   });
 
 
@@ -32,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     if (e.key === 'Escape') {
-      modalOverlay.classList.remove('opened');
+      modalOverlay?.classList.remove('opened');
       document.body.style.position = 'static';
     }
   })

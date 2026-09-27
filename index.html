@@ -377,56 +377,88 @@
           <h2 class="section-favorite__title">
             Choose your <span>favorite</span> coffee
           </h2>
-          <div class="section-favorite__carousel carousel">
-            <div class="carousel__item">
-              <picture class="carousel__img">
-                <img
-                  src="./assets/img/coffee-slider-1.png"
-                  alt="S’mores Frappuccino"
-                >
-              </picture>
-              <h3 class="carousel__item-name">S’mores Frappuccino</h3>
-              <p class="carousel__item-description">
-                This new drink takes an espresso and mixes it with brown sugar
-                and cinnamon before being topped with oat milk.
-              </p>
-              <p class="carousel__item-price">$5.50</p>
-            </div>
-            <div class="carousel__indicators">
-              <div class="carousel__indicator current"></div>
-              <div class="carousel__indicator"></div>
-              <div class="carousel__indicator"></div>
+          <div class="carousel__container">
+            <div class="section-favorite__carousel carousel">
+              <article class="carousel__item">
+                <picture class="carousel__img">
+                  <img
+                    src="./assets/img/coffee-slider-1.png"
+                    alt="S’mores Frappuccino"
+                  >
+                </picture>
+                <h3 class="carousel__item-name">S’mores Frappuccino</h3>
+                <p class="carousel__item-description">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <p class="carousel__item-price">$5.50</p>
+              </article>
+
+              <article class="carousel__item">
+                <picture class="carousel__img">
+                  <img
+                    src="./assets/img/coffee-slider-2.png"
+                    alt="Caramel Macchiato"
+                  >
+                </picture>
+                <h3 class="carousel__item-name">Caramel Macchiato</h3>
+                <p class="carousel__item-description">
+                  Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+                </p>
+                <p class="carousel__item-price">$5.00</p>
+              </article>
+
+              <article class="carousel__item">
+                <picture class="carousel__img">
+                  <img
+                    src="./assets/img/coffee-slider-3.png"
+                    alt="Ice coffee"
+                  >
+                </picture>
+                <h3 class="carousel__item-name">Ice coffee</h3>
+                <p class="carousel__item-description">
+                  A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                </p>
+                <p class="carousel__item-price">$4.50</p>
+              </article>
+            
+
             </div>
             <button class="carousel__btn btn-left">
-              <svg
-                width="14"
-                height="13"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <button class="carousel__btn btn-right">
-              <svg
-                width="14"
-                height="13"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
+                <svg
+                  width="14"
+                  height="13"
+                  viewBox="0 0 14 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="carousel__btn btn-right">
+                <svg
+                  width="14"
+                  height="13"
+                  viewBox="0 0 14 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+                <div class="carousel__indicators">
+                <div class="carousel__indicator active"></div>
+                <div class="carousel__indicator"></div>
+                <div class="carousel__indicator"></div>
+              </div>
           </div>
         </section>
       </div>
