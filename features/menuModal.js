@@ -1,11 +1,15 @@
 function menuModal() {
-  const menuCards = document.querySelectorAll('.card');
+  const menuSection = document.querySelector('.section-menu__menu-cards');
   const modal = document.querySelector('.modal');
 
-  menuCards.forEach(card => {
-    card.addEventListener('click', function() {
-      modal.classList.add('opened');
-    })
+  menuSection?.addEventListener('click', function(event) {
+    const card = event.target.closest('.card');
+
+    if (!card) {
+      return;
+    }
+
+    modal?.classList.add('opened');
   })
 }
 
