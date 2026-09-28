@@ -1,8 +1,13 @@
 import mobileNav from "./features/mobileNav.js";
 import carousel from "./features/carousel.js";
-import menuModal from "./features/menuModal.js";
+import { menuModal, closeModal } from "./features/menuModal.js";
 import createMenuCard from "./features/createMenuCard.js";
 import menuFilter from "./features/menuFilter.js";
+
+window.app = {};
+app.store = {
+  menu: null,
+};
 
 window.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
@@ -29,9 +34,10 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    const menu = await loadMenu();
+    // const menu = await loadMenu();
+    app.store.menu = await loadMenu();
 
-    menu.forEach(item => {
+    app.store.menu.forEach(item => {
       const cards = createMenuCard(item);
 
       menuSection.append(cards);
@@ -46,13 +52,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
   modalOverlay?.addEventListener('click', (event) => {
     if (!event.target.closest('.modal__inner')) {
-      // closeModal();
+      closeModal();
       modalOverlay?.classList.remove('opened');
     }
   });
 
   closeModalBtn?.addEventListener('click', () => {
-    // closeModal();
+    closeModal();
      modalOverlay?.classList.remove('opened');
   });
 

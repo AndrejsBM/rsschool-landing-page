@@ -1,8 +1,6 @@
-function createMenuCard(data) {
-  function formatTitle(title) {
-    return title.replaceAll(' ', '-').toLowerCase();
-  }
+import { formatTitle } from "../utils/formatTitle.js";
 
+function createMenuCard(data) {
   const card = document.createElement('article');
   const imgContainer = document.createElement('div');
   const cardImg = document.createElement('img');
@@ -10,7 +8,8 @@ function createMenuCard(data) {
   const pElem = document.createElement('p');
   const pPriceElem = document.createElement('p');
   card.classList.add('section-menu__menu-card', 'card');
-  card.dataset.category = data.category;
+  card.dataset.id = data.id;
+  card.dataset.category = data.category; 
   cardImg.src = `../assets/img/${formatTitle(data.name)}.jpg`;
   cardImg.alt = data.name;
   cardImg.classList.add('card__img');

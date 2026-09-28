@@ -540,14 +540,14 @@
         <div class="modal__img-container">
           <img
             class="modal__img"
-            src="../assets/img/irish-coffee.jpg"
+            src=""
             alt="">
         </div>
 
         <div class="modal__wrapper">
           <div class="modal__content">
-            <h3 class="modal__title">Irish coffee</h3>
-            <p class="modal__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+            <h3 class="modal__title"></h3>
+            <p class="modal__description"></p>
           </div>
           <form class="modal__form">
             <div class="modal__container">
@@ -555,15 +555,15 @@
               <div class="modal__row">
                 <div class="modal__form-radio">
                   <input type="radio" name="size" id="size-s" checked>
-                  <label for="size-s"><span>S</span>200 ml</label>
+                  <label for="size-s"><span class="modal__form-radio-size">S</span><span class="modal__form-radio-size-value"></span></label>
                 </div>
                 <div class="modal__form-radio">
                   <input type="radio" name="size" id="size-m">
-                  <label for="size-m"><span>M</span>300 ml</label>
+                  <label for="size-m"><span class="modal__form-radio-size">M</span><span class="modal__form-radio-size-value"></span></label>
                 </div>
                 <div class="modal__form-radio">
                   <input type="radio" name="size" id="size-l">
-                  <label for="size-l"><span>L</span>400 ml</label>
+                  <label for="size-l"><span class="modal__form-radio-size">L</span><span class="modal__form-radio-size-value"></span></label>
                 </div>
               </div>
             </div>
@@ -572,23 +572,23 @@
               <span>Additives</span>
               <div class="modal__row">
                 <div class="modal__form-checkbox">
-                  <input type="checkbox" name="sugar" id="sugar">
-                  <label for="sugar"><span>1</span>Sugar</label>
+                  <input type="checkbox" name="add-1" id="add-1">
+                  <label for="add-1"><span class="modal__form-checkbox-add">1</span><span class="modal__form-checkbox-add-value"></span></label>
                 </div>
                 <div class="modal__form-checkbox">
-                  <input type="checkbox" name="cinnamon" id="cinnamon">
-                  <label for="cinnamon"><span>2</span>Cinnamon</label>
+                  <input type="checkbox" name="add-2" id="add-2">
+                  <label for="add-2"><span class="modal__form-checkbox-add">2</span><span class="modal__form-checkbox-add-value"></span></label>
                 </div>
                 <div class="modal__form-checkbox">
-                  <input type="checkbox" name="syrup" id="syrup">
-                  <label for="syrup"><span>3</span>Syrup</label>
+                  <input type="checkbox" name="add-3" id="add-3">
+                  <label for="add-3"><span class="modal__form-checkbox-add">3</span><span class="modal__form-checkbox-add-value"></span></label>
                 </div>
               </div>
             </div>
 
             <div class="modal__total">
               <span>Total:</span>
-              <span>$7.00</span>
+              <span id="total"></span>
             </div>
 
             <div class="modal__info">
