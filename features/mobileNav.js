@@ -4,7 +4,7 @@ function mobileNav() {
   const navLinks = pageHeader.querySelectorAll('.nav__list-link');
 
   function toggleNav() {
-     if (window.innerWidth > 820) {
+     if (window.innerWidth > 768) {
       return;
     }
 
@@ -14,7 +14,7 @@ function mobileNav() {
   }
 
    window.addEventListener('resize', () => {
-     if (window.innerWidth > 820) {
+     if (window.innerWidth > 768) {
        pageHeader.classList.remove('nav-open');
        document.body.style.position = 'static';
      }
