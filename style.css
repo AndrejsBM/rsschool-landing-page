@@ -92,7 +92,10 @@ button {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  height: 100dvh;
+  width: 100%;
+  margin-right: calc(-1 * (100vw - 100%));
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: var(--16px);
@@ -1539,7 +1542,7 @@ body[data-theme='dark'] {
 .modal__form-radio {
   width: 116px;
  
-  span {
+  .modal__form-radio-size {
     background-color: var(--border-clr-primary);
     color: var(--text-clr-primary);
     border-radius: 100px;
@@ -1551,6 +1554,12 @@ body[data-theme='dark'] {
     margin-right: var(--8px);
     transition: background-color 0.3s, color 0.3s;
   }
+
+  .modal__form-radio-size-value {
+    background-color: var(--text-clr-inverse);
+    transition: background-color 0.3s;
+  }
+
 
   label {
     display: flex;
@@ -1574,15 +1583,19 @@ body[data-theme='dark'] {
     border-color: var(--border-clr-inverse);
     color: var(--text-clr-inverse);
 
-    span {
+    .modal__form-radio-size {
       background-color: var(--text-clr-inverse);
       color: var(--text-clr-primary);
+    }
+
+    .modal__form-radio-size-value {
+      background-color: var(--border-clr-inverse);
     }
   }
 }
 
 .modal__form-checkbox {
-  span {
+  .modal__form-checkbox-add {
     background-color: var(--border-clr-primary);
     color: var(--text-clr-primary);
     border-radius: 100px;
@@ -1593,6 +1606,11 @@ body[data-theme='dark'] {
     align-items: center;
     margin-right: var(--8px);
     transition: background-color 0.3s, color 0.3s;
+  }
+
+  .modal__form-checkbox-add-value {
+    background-color: var(--text-clr-inverse);
+    transition: background-color 0.3s;
   }
 
   label {
@@ -1613,14 +1631,18 @@ body[data-theme='dark'] {
     appearance: none;
   }
 
-   input[type="checkbox"]:checked + label{
+  input[type="checkbox"]:checked + label {
     background-color: var(--border-clr-inverse);
     border-color: var(--border-clr-inverse);
     color: var(--text-clr-inverse);
 
-    span {
+    .modal__form-checkbox-add {
       background-color: var(--text-clr-inverse);
       color: var(--text-clr-primary);
+    }
+
+    .modal__form-checkbox-add-value {
+      background-color: var(--border-clr-inverse);
     }
   }
 }
