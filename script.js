@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
     app.store.menu.forEach(item => {
       const cards = createMenuCard(item);
 
-      menuSection.append(cards);
+      menuSection.appendChild(cards);
     });
 
     menuFilter();
