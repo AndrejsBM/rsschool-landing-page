@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   updateTheme();
   mobileNav();
-  // carousel();
+  carousel();
   menuModal();
 
   async function loadMenu() {
@@ -33,8 +33,6 @@ window.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-
-    // const menu = await loadMenu();
     app.store.menu = await loadMenu();
 
     app.store.menu.forEach(item => {
